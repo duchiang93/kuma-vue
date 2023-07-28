@@ -1,0 +1,36 @@
+.contact {
+  height: 100vh;
+
+  .contact-text {
+    height: 50px;
+    background-color: #e4e4e4;
+    color: #797979;
+
+    @include phone {
+      height: 120px;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  .contact-input-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    line-height: 35px;
+
+    select {
+      height: 40px;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .contact-form-button {
+    height: 40px;
+    background-color: #8752a0;
+    cursor: pointer;
+  }
+}

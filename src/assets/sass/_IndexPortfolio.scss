@@ -1,0 +1,53 @@
+.index-portfolio {
+  .index-portfolio-img {
+    max-width: 100%;
+  }
+
+  .index-portfolio-details {
+    width: 400px;
+  }
+
+  .index-portfolio-details-arrow-group {
+    display: flex;
+
+    @include phone {
+      margin: 20px 0;
+    }
+
+    .index-portfolio-details-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      background-color: #e8e8e8;
+      border-radius: 50%;
+      margin: 0 20px 20px 0;
+      cursor: pointer;
+    }
+  }
+
+  .index-portfolio-details-arrow-icon,
+  .index-portfolio-details-feature-item,
+  .index-portfolio-details-category-group,
+  .index-portfolio-details-category-text {
+    color: #797979;
+  }
+
+  .index-portfolio-details-arrow-icon,
+  .index-portfolio-details-category-icon {
+    font-size: 25px;
+    user-select: none;
+  }
+
+  .index-portfolio-pre-img {
+    width: 150px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .index-portfolio-related-product-card {
+    border: none !important;
+  }
+}

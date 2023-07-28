@@ -1,0 +1,129 @@
+@import "../mixins.scss";
+
+.index-list {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px 50px 20px 50px;
+
+  @include phone {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .index-list-box-img {
+    width: 350px;
+
+    @include phone {
+      width: 300px;
+    }
+  }
+
+  .index-list-box-text-box {
+    position: absolute;
+    top: 0;
+    background-color: rgba(131, 84, 149, 0.8);
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include phone {
+      width: 300px;
+      height: 300px;
+    }
+
+    .index-list-box-content-box-text-p {
+      padding: 0 3px;
+      font-size: 12px;
+    }
+
+    .index-list-box-text-box-link-box {
+      width: 150px;
+      height: 50px;
+
+      .index-list-box-link {
+        width: 50px;
+        text-decoration: none;
+        cursor: pointer;
+
+        .index-list-box-link-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 25px;
+          color: white;
+          transition: color 0.3s ease;
+
+          &:hover {
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .index-list-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+    .index-list-content-title {
+      padding: 15px 0 5px 0;
+    }
+
+    .index-list-content-text {
+      color: #797979;
+      font-size: 14px;
+    }
+  }
+}
+
+.index-list-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  visibility: hidden;
+}
+.index-list-popup-img {
+  width: 30%;
+  z-index: 99;
+
+  @include phone {
+    width: 80%;
+  }
+}
+
+.index-list-popup-close {
+  position: absolute;
+  top: 100px;
+  right: 400px;
+  cursor: pointer;
+
+  @include phone {
+    top: 200px;
+    right: 50px;
+  }
+}
+
+.index-list-popup-close-icon {
+  font-size: 50px;
+  color: white;
+
+  @include phone {
+    font-size: 40px;
+  }
+}
+
+.visiable {
+  visibility: visible;
+}

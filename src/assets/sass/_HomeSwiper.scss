@@ -1,0 +1,79 @@
+@import "../mixins.scss";
+
+.home-swiper {
+  position: relative;
+
+  @include phone {
+    flex-direction: column;
+  }
+
+  .swiper {
+    @include phone {
+      width: 100vw;
+    }
+
+    .home-swiper-img {
+      width: 100%;
+      height: 95vh;
+      filter: grayscale(100%) brightness(75%) contrast(100%);
+
+      @include phone {
+        height: 300px;
+      }
+    }
+  }
+
+  .home-swiper-text-box {
+    position: absolute;
+    color: white;
+    top: 0;
+    z-index: 2;
+
+    @include phone {
+      position: static;
+      color: black;
+    }
+
+    .home-swiper-content-text1 {
+      margin-top: 125px;
+      margin-bottom: 20px;
+      font-size: 50px;
+
+      @include phone {
+        margin-top: 50px;
+        font-size: 40px;
+      }
+    }
+
+    .home-swiper-content-text2 {
+      font-size: 35px;
+      padding-bottom: 100px;
+
+      @include phone {
+        padding-bottom: 0;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next:after {
+    color: #fff;
+  }
+}

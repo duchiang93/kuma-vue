@@ -1,0 +1,34 @@
+@import "./sass/_AsideMenu.scss";
+@import "./sass/HomeSwiper";
+@import "./sass//Footer";
+@import "./sass//Contact";
+@import "./sass/Header";
+@import "./sass/IndexNavbar";
+@import "./sass//IndexList";
+@import "./sass//IndexPortfolio";
+@import "../assets//sass/Pagination";
+@import "../assets/sass/BackToTop";
+
+@import "../assets//Icon//iconfont.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+@import "./mixins.scss";
+
+.main-container {
+  display: flex;
+
+  @include phone {
+    flex-direction: column;
+  }
+  .content {
+    flex: 1;
+    margin-left: 20vw;
+    width: 80vw;
+    overflow: hidden;
+
+    @include phone {
+      width: 100vw;
+      margin-left: 0;
+    }
+  }
+}

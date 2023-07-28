@@ -1,0 +1,23 @@
+@import "../mixins.scss";
+
+.header {
+  height: 10vh;
+  background-color: #f9f9f9;
+
+  @include phone {
+    height: 20vh;
+  }
+
+  .header-content {
+    padding: 0 50px;
+    color: #797979;
+
+    @include phone {
+      flex-direction: column;
+    }
+  }
+
+  .header-content-text {
+    word-spacing: 15px;
+  }
+}
